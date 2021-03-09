@@ -49,7 +49,7 @@ public class FootballField {
 	}
 	public void addToTeamBlue(Student std) {
 		if ( currentSizeBlue < capacityBlue ) {
-			teamRed[currentSizeBlue] = std ;
+			teamBlue[currentSizeBlue] = std ;
 			currentSizeBlue ++ ;
 		}
 		else

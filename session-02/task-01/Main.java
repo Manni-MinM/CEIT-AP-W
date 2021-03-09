@@ -32,5 +32,6 @@ public class Main {
 		field.addToTeamBlue(std3) ;
 		
 		field.printRed() ;
+		field.printBlue() ;
 	}
 }
