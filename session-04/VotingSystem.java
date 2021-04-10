@@ -16,7 +16,19 @@ class VotingSystem {
 			voting.createChoice(choice) ;
 		votingList.add(voting) ;
 	}
+	public void vote(int id , Person person , ArrayList<String> choices) {
+		if ( id < 0 || id >= votingList.size() ) {
+			System.out.println("[Voting With Such Index Does Not Exist]") ;
+			return ;
+		}
+		Voting currentVoting = votingList.get(id) ;
+		currentVoting.vote(person , choices) ;
+	}
 	public void printVoting(int id) {
+		if ( id < 0 || id >= votingList.size() ) {
+			System.out.println("[Voting With Such Index Does Not Exist]") ;
+			return ;
+		}
 		Voting currentVoting = votingList.get(id) ;
 		System.out.print(currentVoting.getQuestion() + " : ") ;
 		for ( int i = 0 ; i < currentVoting.getChoices().size() ; i ++ ) {
@@ -27,14 +39,16 @@ class VotingSystem {
 		System.out.println() ;
 	}
 	public void printVotingList() {
-		for ( int i = 0 ; i < votingList.size() ; i ++ )
+		for ( int i = 0 ; i < votingList.size() ; i ++ ) {
+			System.out.println(i + ")") ;
 			printVoting(i) ;
-	}
-	public void vote(int id , Person person , ArrayList<String> choices) {
-		Voting currentVoting = votingList.get(id) ;
-		currentVoting.vote(person , choices) ;
+		}
 	}
 	public void printResult(int id) {
+		if ( id < 0 || id >= votingList.size() ) {
+			System.out.println("[Voting With Such Index Does Not Exist]") ;
+			return ;
+		}
 		Voting currentVoting = votingList.get(id) ;
 		printVoting(id) ;
 		currentVoting.printVotes() ;

@@ -19,5 +19,12 @@ final class Person {
 	public String toString() {
 		return firstName + " " + lastName ;
 	}
+	public boolean equals(Object person) {
+		if ( !(person instanceof Person) )
+			return false ;
+		if ( person == this )
+			return true ;
+		return person.toString().equals(this.toString()) ;
+	}
 }
 
