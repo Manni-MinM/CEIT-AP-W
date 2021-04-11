@@ -3,6 +3,12 @@
 import java.util.Scanner ;
 import java.util.ArrayList ;
 
+/**
+ * Main class for the voting application
+ * 
+ * @author Manni Moghimi
+ * @version v1.0
+ */
 public class Main {
 	public static void main(String[] args) {
 		VotingSystem VS = new VotingSystem() ;
@@ -14,6 +20,7 @@ public class Main {
 			System.out.println("3) Get Voting With Index $indx") ;
 			System.out.println("4) Vote") ;
 			System.out.println("5) Get Result of Voting With Index $indx") ;
+			System.out.println("6) Exit") ;
 			System.out.println() ;
 			String line = input.nextLine() ;
 			if ( line.equals("1") ) {
@@ -77,11 +84,18 @@ public class Main {
 				// Get details about voting with index $indx
 				VS.printResult(indx) ;
 			}
+			else if ( line.equals("6") ) {
+				// Close application
+				break ;
+			}
 			else 
 				handleMenuException() ;
 			System.out.println() ;
 		}
 	}
+	/**
+	 * Prompts user if user command was invalid in the menu
+	 */
 	public static void handleMenuException() {
 		System.out.println("[Command Not Found]") ;
 	}
