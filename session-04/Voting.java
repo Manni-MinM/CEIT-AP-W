@@ -6,6 +6,7 @@ import java.util.Random ;
 import java.util.HashSet ;
 import java.util.HashMap ;
 import java.util.ArrayList ;
+import java.util.Collections ;
 import java.util.GregorianCalendar ;
 
 /**
@@ -100,8 +101,14 @@ public class Voting {
 	 * Prints every choice and number of votes for each vote
 	 */
 	public void printVotes() {
+		ArrayList <Pair> list = new ArrayList<Pair>() ;
 		for ( String choice : choices.keySet() )
-			System.out.printf("[%s => %s]\n" , choice , choices.get(choice).size()) ;
+			list.add(new Pair(choice , choices.get(choice).size())) ;
+		Collections.sort(list , new SortByValue()) ;
+		for ( Pair pair : list ) {
+			double percentage = (double)pair.getValue() / (double)voters.size() * 100f ;
+			System.out.printf("[%s => %d (%f%%)]\n" , pair.getKey() , pair.getValue() , percentage) ;
+		}
 	}
 }
 
