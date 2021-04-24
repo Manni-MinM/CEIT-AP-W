@@ -1,5 +1,8 @@
 // BWOTSHEWCHB
 
+/**
+ * Main Class
+ */
 public class Main {
 	public static void main(String[] args) {
 		Circle circle1 = new Circle(19);
