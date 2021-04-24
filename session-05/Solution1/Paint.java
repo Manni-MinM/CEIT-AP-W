@@ -2,6 +2,9 @@
 
 import java.util.ArrayList ;
 
+/**
+ * A Class to hold information about all Paint Objects
+ */
 public class Paint {
 	// Fields
 	private ArrayList<Triangle> triangles ;
