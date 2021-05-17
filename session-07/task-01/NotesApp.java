@@ -6,6 +6,12 @@ import java.util.Scanner ;
 import java.util.ArrayList ;
 import java.util.InputMismatchException ;
 
+/**
+ * A Class to hold information about the NotesApp
+ *
+ * @author Manni Moghimi
+ * @version v1.0
+ */
 public class NotesApp {
 	// Fields
 	private final String mainFolderPath = "./notes" ;
@@ -13,11 +19,20 @@ public class NotesApp {
 	private Scanner scanner ;
 	private FileUtils fileUtils ;
 	// Constructor
+	/**
+	 * Creates NotesApp Object
+	 */
 	public NotesApp() {
 		fileUtils = new FileUtils() ;
 		scanner = new Scanner(System.in) ;
 	}
 	// Methods
+	/**
+	 * Checks the Files list for File with specified filename
+	 *
+	 * @param filename The filename to be checked
+	 * @return True if the File exists otherwise False
+	 */
 	public boolean checkDuplicate(String filename) {
 		ArrayList<String> files = getFiles() ;
 		if ( files == null )
@@ -25,6 +40,11 @@ public class NotesApp {
 		else 
 			return files.contains(filename) ;	
 	}
+	/**
+	 * Creates a new Note
+	 *
+	 * @param filename The name of the File
+	 */
 	public void newNote(String filename) {
 		System.out.print("Context : ") ;
 		String context = scanner.nextLine() ;
@@ -52,6 +72,11 @@ public class NotesApp {
 			exception.printStackTrace() ;
 		}
 	}
+	/**
+	 * Reads the main.txt File and gets a list of all the Notes
+	 *
+	 * @return An ArrayList containing the filename of the Notes
+	 */
 	public ArrayList<String> getFiles() {
 		try {
 			String data = fileUtils.readBuffered(mainFilePath) ;
@@ -66,6 +91,9 @@ public class NotesApp {
 			return null ;
 		}
 	}
+	/**
+	 * Shows all available Notes
+	 */
 	public void showNotes() {
 		ArrayList<String> files = getFiles() ;
 		if ( files == null ) {
@@ -77,6 +105,11 @@ public class NotesApp {
 			System.out.println("=> " + "\"" + file + "\"") ;
 		System.out.println() ;
 	}
+	/**
+	 * Previews a Note
+	 *
+	 * @param filename The filename of the Note to be previewed
+	 */
 	public void previewNote(String filename) {
 		try {
 			String path = fileUtils.joinPath(mainFolderPath , filename) ;
@@ -88,6 +121,11 @@ public class NotesApp {
 			exception.printStackTrace() ;
 		}
 	}
+	/**
+	 * Deletes a Note
+	 *
+	 * @param filename The filename of the Note to be previewed
+	 */
 	public void deleteNote(String filename) {
 		try {
 			String path = fileUtils.joinPath(mainFolderPath , filename) ;

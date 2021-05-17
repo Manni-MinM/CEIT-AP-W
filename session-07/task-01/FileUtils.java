@@ -12,6 +12,12 @@ import java.io.FileOutputStream ;
 import java.util.Scanner ;
 import java.util.ArrayList ;
 
+/**
+ * A Class used to write IO to files
+ *
+ * @author Manni Moghimi
+ * @version v1.0
+ */
 public class FileUtils {
 	// Fields
 	private Scanner scanner ;
@@ -22,12 +28,24 @@ public class FileUtils {
 	private BufferedWriter bufferedWriter ;
 	private BufferedReader bufferedReader ;
 	// Methods
+	/**
+	 * Joins Path of two or more paths by concatenation
+	 *
+	 * @param args List of arguments to be conatenated
+	 * @return The concatenated path in String format
+	 */
 	public String joinPath(String... args) {
 		String returnValue = "" ;
 		for ( String currentPath : args )
 			returnValue += currentPath + "/" ;
 		return returnValue ;
 	}
+	/**
+	 * Writes input to File using FileOutputStream
+	 *
+	 * @param note The Note to be written to the File
+	 * @throws IOException
+	 */
 	public void writeOutputStream(Note note) throws IOException {
 		File file = new File(note.getFilePath()) ;
 		fout = new FileOutputStream(note.getFilePath()) ;
@@ -35,6 +53,13 @@ public class FileUtils {
 		fout.write(bytes) ;
 		fout.close() ;
 	}
+	/**
+	 * Reads input from a File using FileInputStream
+	 *
+	 * @param filePath The Path of the File to be read
+	 * @return The input read from the File
+	 * @throws IOException
+	 */
 	public String readInputStream(String filePath) throws IOException {
 		String returnValue = "" ;
 		fin = new FileInputStream(filePath) ;
@@ -44,6 +69,13 @@ public class FileUtils {
 		fin.close() ;
 		return returnValue ;
 	}
+	/**
+	 * Writes an ArrayList to a File using BufferedWriter
+	 *
+	 * @param filePath The path of the File to be written
+	 * @param files The ArrayList to be written to the File
+	 * @throws IOException
+	 */
 	public void writeBuffered(String filePath , ArrayList<String> files) throws IOException {
 		writer = new FileWriter(filePath) ;
 		bufferedWriter = new BufferedWriter(writer) ;
@@ -54,6 +86,13 @@ public class FileUtils {
 		bufferedWriter.write(output) ;
 		bufferedWriter.close() ;
 	}
+	/**
+	 * Reads input from a File using BufferedReader
+	 *
+	 * @param filePath The path of the File to be read
+	 * @return The input read from the File
+	 * @throws IOException
+	 */
 	public String readBuffered(String filePath) throws IOException {
 		String returnValue = "" ;
 		reader = new FileReader(filePath) ;
@@ -65,6 +104,12 @@ public class FileUtils {
 		bufferedReader.close() ;
 		return returnValue ;
 	}
+	/**
+	 * Deletes a File
+	 *
+	 * @param filePath The path of the File to be deleted
+	 * @throws IOException
+	 */
 	public void delete(String filePath) throws IOException {
 		File file = new File(filePath) ;
 		file.delete() ;

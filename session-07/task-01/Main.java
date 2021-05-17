@@ -2,6 +2,12 @@
 
 import java.util.Scanner ;
 
+/**
+ * Main Class
+ *
+ * @author Manni Moghimi
+ * @version v1.0
+ */
 public class Main {
 	public static void main(String[] args) {
 		NotesApp notesApp = new NotesApp() ;
@@ -33,6 +39,9 @@ public class Main {
 			System.out.println() ;
 		} while ( continueLoop ) ;
 	}
+	/**
+	 * Displays the Menu
+	 */
 	public static void showMenu() {
 		System.out.println("### Notes ###") ;
 		System.out.println() ;
