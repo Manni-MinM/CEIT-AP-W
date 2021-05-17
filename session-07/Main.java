@@ -13,16 +13,16 @@ public class Main {
 			String input = scanner.nextLine() ;
 			String split[] = input.split(" ") ;
 			if ( split[0].equals("$show") ) {
-				// TODO
+				notesApp.showNotes() ;
 			}
 			else if ( split[0].equals("$add") ) {
 				notesApp.newNote(split[1]) ;
 			}
 			else if ( split[0].equals("$preview") ) {
-				// TODO
+				notesApp.previewNote(split[1]) ;
 			}
 			else if ( split[0].equals("$delete") ) {
-				// TODO
+				notesApp.deleteNote(split[1]) ;
 			}
 			else if ( split[0].equals("$exit") ) {
 				continueLoop = false ;

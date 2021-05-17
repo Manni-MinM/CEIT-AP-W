@@ -1,34 +1,43 @@
 // BWOTSHEWCHB
 
-import java.io.FileReader ;
-import java.io.FileWriter ;
+import java.io.File ;
 import java.io.IOException ;
+import java.io.FileInputStream ;
+import java.io.FileOutputStream ;
 
 import java.util.Scanner ;
 
 public class FileUtils {
 	// Fields
-	private String folderPath ;
 	private Scanner scanner ;
-	private FileReader fileReader ;
-	private FileWriter fileWriter ;
-	// Constructor
-	public FileUtils(String folderPath) {
-		this.folderPath = folderPath ;
-	}
+	private FileInputStream fin ;
+	private FileOutputStream fout ;
 	// Methods
 	public String joinPath(String... args) {
-		String returnValue = folderPath ;
+		String returnValue = "" ;
 		for ( String currentPath : args )
-			returnValue += "/" + currentPath ;
+			returnValue += currentPath + "/" ;
 		return returnValue ;
 	}
-	public void write(Note note) throws IOException {
-		fileWriter = new FileWriter(joinPath(folderPath , note.getFilename())) ;
-		fileWriter.write(note.getContext()) ;
+	public void writeOutputStream(Note note) throws IOException {
+		File file = new File(note.getFilePath()) ;
+		fout = new FileOutputStream(note.getFilePath()) ;
+		byte bytes[] = note.getContext().getBytes() ;
+		fout.write(bytes) ;
+		fout.close() ;
 	}
-	public void read(String filename) {
-		
+	public String readInputStream(String filePath) throws IOException {
+		String returnValue = "" ;
+		fin = new FileInputStream(filePath) ;
+		int input ;
+		while ( (input = fin.read()) != -1 )
+			returnValue += (char)input ;
+		fin.close() ;
+		return returnValue ;
+	}
+	public void delete(String filePath) throws IOException {
+		File file = new File(filePath) ;
+		file.delete() ;
 	}
 }
 
