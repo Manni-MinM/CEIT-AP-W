@@ -41,7 +41,7 @@ public class FileUtils {
 		return returnValue ;
 	}
 	/**
-	 * Writes input to File using FileOutputStream
+	 * Writes output to File using FileOutputStream
 	 *
 	 * @param note The Note to be written to the File
 	 * @throws IOException
