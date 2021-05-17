@@ -30,6 +30,7 @@ public class Main {
 			else {
 				System.err.println("[INVALID COMMAND]") ;
 			}
+			System.out.println() ;
 		} while ( continueLoop ) ;
 	}
 	public static void showMenu() {
