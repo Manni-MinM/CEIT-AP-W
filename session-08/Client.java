@@ -8,6 +8,12 @@ import java.io.ObjectOutputStream ;
 
 import java.net.Socket ;
 
+/**
+ * A Class to hold information about each Client
+ *
+ * @author Manni Moghimi
+ * @version v1.0
+ */
 public class Client {
 	public static void main(String[] args) {
 		System.out.println("[STARTING CLIENT]") ;

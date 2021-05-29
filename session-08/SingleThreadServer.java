@@ -7,6 +7,12 @@ import java.io.ObjectOutputStream ;
 import java.net.Socket ;
 import java.net.ServerSocket ;
 
+/**
+ * A Class to hold information about the Single Thread Server
+ *
+ * @author Manni Moghimi
+ * @version v1.0
+ */
 public class SingleThreadServer {
 	public static void main(String[] args) {
 		try ( ServerSocket serverSocket = new ServerSocket(6969) ) {
