@@ -11,6 +11,12 @@ import javafx.scene.control.* ;
 import javafx.event.ActionEvent ;
 import javafx.fxml.Initializable ;
 
+/**
+ * The Controller Class
+ *
+ * @author Manni Moghimi
+ * @version v1.0
+ */
 public class Controller implements Initializable {
 	@FXML
 	private Button cos ;
@@ -59,6 +65,11 @@ public class Controller implements Initializable {
 	String answer = "" ;
 	String operation = "" ;
 
+	/**
+	 * Handles button actions
+	 *
+	 * @param event The event
+	 */
 	public void handleButtonAction(ActionEvent event) {
 		if ( event.getSource() == one ) {
 			display.setText(display.getText() + "1") ;
@@ -139,6 +150,12 @@ public class Controller implements Initializable {
 		}
 	}
 	@Override
+	/**
+	 * Initializes the Controller
+	 *
+	 * @param url The url
+	 * @param resourceBundle The resource Bundle
+	 */
 	public void initialize(URL url , ResourceBundle resourceBundle) {
 		// PASS
 	}
