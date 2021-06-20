@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="352.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.Controller">
+   <children>
+      <GridPane layoutY="85.0" prefHeight="366.0" prefWidth="350.0" style="-fx-background-color: coral;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="cos" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="119.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="cos" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="addition" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="124.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="+" textAlignment="CENTER" GridPane.columnIndex="3">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="sin" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="140.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="sin" textAlignment="CENTER">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="seven" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="184.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="7" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="eight" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="119.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="nine" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="162.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="subtraction" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="171.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="-" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="four" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="163.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="4" textAlignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="five" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="137.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="six" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="149.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="multiplication" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="112.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="*" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="zero" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="148.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="0" textAlignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="tan" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="219.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="tan" textAlignment="CENTER" GridPane.columnIndex="2">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="equals" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="153.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="=" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="division" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="242.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="/" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="clear" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="130.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="C" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="power" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="242.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="^" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="one" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="163.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="1" textAlignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="two" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="163.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="three" graphicTextGap="1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="163.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="MV Boli" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8244274809160305" startX="0.3396946564885496">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9157894849777222" green="0.06444444507360458" blue="0.06444444507360458" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+         </children>
+      </GridPane>
+      <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" layoutX="4.0" layoutY="2.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="344.0" style="-fx-background-color: coral;">
+         <font>
+            <Font name="MV Boli" size="29.0" />
+         </font>
+      </TextField>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
